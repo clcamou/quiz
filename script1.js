@@ -6,6 +6,7 @@ let question = document.getElementById("question");
 let choiceA = document.getElementById("A");
 let choiceB = document.getElementById("B");
 let choiceC = document.getElementById("C");
+let choiceD = document.getElementById("D");
 let counter = document.getElementById("counter");
 let timeGauge = document.getElementById("timeGauge");
 let progress = document.getElementById("progress");
@@ -31,6 +32,7 @@ function renderQuestion(){
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD; 
 }
 
 start.addEventListener("click",startQuiz);
@@ -116,6 +118,6 @@ function scoreRender(){
     let scorePerCent = Math.round(100 * score/questions.length);
     
     // choose the image based on the scorePerCent
- 
+    scoreDiv.textContent = "Was it technically great? No. Did you give it your all? Also, no";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }

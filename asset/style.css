@@ -1,10 +1,18 @@
+h1{
+    margin : 100px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: steelblue;
+}
+
 body{
     font-size: 20px;
-    font-family: monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url("../asset/blue-snow/blue-snow.png");
 }
 
 #container{
-    margin : 20px auto;
+    margin : 100px auto;
     background-color: white;
     height: 300px;
     width : 700px;
@@ -13,35 +21,22 @@ body{
     position: relative;
 }
 #start{
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: bolder;
-    word-break: break-all;
-    width:100px;
+    word-break: keep-all;
+    width:150px;
     height:150px;
-    border : 2px solid lightgrey;
+    border : 3px solid lightgrey;
     text-align: center;
     cursor: pointer;
     position: absolute;
-    left:300px;
-    top:50px;
+    left:275px;
+    top:75px;
     color : lightgrey;
 }
 #start:hover{
-    border: 3px solid lightseagreen;
-    color : lightseagreen;
-}
-
-#qImg{
-    width : 200px;
-    height : 200px;
-    position: absolute;
-    left : 0px;
-    top : 0px;
-}
-#qImg img{
-    width : 200px;
-    height : 200px;
-    border-top-left-radius: 5px;
+    border: 3px solid steelblue;
+    color : steelblue;
 }
 
 #question{
@@ -130,11 +125,7 @@ body{
     position: relative;
     display: none;
 }
-#scoreContainer img{
-    position: absolute;
-    top:100px;
-    left:325px;
-}
+
 #scoreContainer p{
     position: absolute;
     display: block;
