@@ -78,6 +78,8 @@ function checkAnswer(answer){
         score++;
         answerIsCorrect();
         questionTime = 15;
+        gaugeWidth = 150; // 150px is the length given for the progress bar 
+        gaugeUnit = gaugeWidth / questionTime
     }else{
         // answer is wrong
         answerIsWrong();
@@ -120,4 +122,8 @@ function scoreRender(){
     scoreDiv.textContent = "Was it technically great? No. Did you give it your all? Also, no";}
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
-//adding points with a gobal varible to increment the points by one if correct, or remove if wrong, reset to  seconds instead of 15. 
+
+let storagedHighScore = localStorage.getItem("highscore");
+    if (storagedHighScore  || score > parseInt(storagedHighScore)) {
+  localStorage.setItem("highscore", score);
+}
