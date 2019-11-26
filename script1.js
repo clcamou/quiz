@@ -121,9 +121,17 @@ function scoreRender(){
     else{
     scoreDiv.textContent = "Was it technically great? No. Did you give it your all? Also, no";}
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+
+    let storagedHighScore = localStorage.getItem("highscore");
+    console.log(storagedHighScore)
+        // console.log('MY SCORE',score)
+    if (storagedHighScore == null) {
+        localStorage.setItem("highscore", score)
+    }
+    if (storagedHighScore  || score > parseInt(storagedHighScore)) {
+        console.log(score)
+        localStorage.setItem("highscore", score);
+    } 
+
 }
 
-let storagedHighScore = localStorage.getItem("highscore");
-    if (storagedHighScore  || score > parseInt(storagedHighScore)) {
-  localStorage.setItem("highscore", score);
-}
